@@ -61,7 +61,6 @@ private struct IngredientView: View {
       rice
       water
     }
-    .font(.title3)
   }
 }
 
@@ -140,7 +139,6 @@ private struct InstructionView: View {
             }
           }
         }
-        .font(.title3)
         .padding(.vertical)
       }
     }
