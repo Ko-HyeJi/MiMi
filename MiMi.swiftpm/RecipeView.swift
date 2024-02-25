@@ -132,8 +132,8 @@ private struct InstructionView: View {
           
           if let time = step.timerSetting {
             Button {
-              timer.setTimer(to: time)
-              timer.startTimer()
+              timer.set(to: time * 60)
+              timer.start()
             } label: {
               Image(systemName: "timer")
                 .bold()

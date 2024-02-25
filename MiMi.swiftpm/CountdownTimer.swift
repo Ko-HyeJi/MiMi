@@ -9,47 +9,55 @@ import Foundation
 import Combine
 
 final class CountdownTimer: ObservableObject {
+  static let shared = CountdownTimer()
+  
   @Published var state: TimerState = .stopped
   @Published var counter = 0
+  private var subscription: AnyCancellable?
   
-  private var timerSubscription: AnyCancellable?
-  
-  func setTimer(to minutes: Int) {
-    self.counter = minutes * 60
+  private func cancelSubscription() {
+    self.subscription?.cancel()
   }
   
-  func startTimer() {
-    timerSubscription = Timer.publish(every: 1.0, on: .main, in: .common)
+  func set(to count: Int) {
+    self.counter = count
+  }
+  
+  func start() {
+    subscription = Timer.publish(every: 1.0, on: .main, in: .common)
       .autoconnect()
       .sink { [weak self] _ in
-        if let self = self {
-          if self.counter > 0 {
-            self.counter -= 1
-          } else {
-            self.timerSubscription?.cancel()
-            self.state = .terminated
-          }
+        guard let self = self else { return }
+        if self.counter > 0 {
+          self.counter -= 1
+        } else {
+          self.terminate()
         }
       }
     self.state = .running
   }
   
-  func pauseTimer() {
-    self.timerSubscription?.cancel()
+  func pause() {
+    self.cancelSubscription()
     self.state = .paused
   }
   
-  func stopTimer() {
-    self.timerSubscription?.cancel()
-    self.timerSubscription = nil
+  private func terminate() {
+    self.cancelSubscription()
+    self.state = .terminated
+  }
+  
+  func stop() {
+    self.cancelSubscription()
+    self.subscription = nil
     self.state = .stopped
   }
   
   func testTimer() {
-    counter = 5
-    startTimer()
+    self.set(to: 5)
+    self.start()
   }
-    
+  
   enum TimerState {
     case running
     case paused

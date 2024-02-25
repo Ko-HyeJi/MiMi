@@ -17,9 +17,6 @@ struct TimerView: View {
         RunningTimerView(viewModel: viewModel)
       } else {
         TerminatedTimerView(viewModel: viewModel)
-          .onAppear {
-            viewModel.generateHapticFeedback()
-          }
       }
     }
   }
@@ -35,16 +32,16 @@ private struct RunningTimerView: View {
       HStack {
         if timer.state == .paused {
           TimerButtonView(icon: "play.fill") {
-            timer.startTimer()
+            timer.start()
           }
         } else {
           TimerButtonView(icon: "pause") {
-            timer.pauseTimer()
+            timer.pause()
           }
         }
         
         TimerButtonView(icon: "multiply") {
-          timer.stopTimer()
+          timer.stop()
         }
         
         Spacer()
@@ -80,7 +77,7 @@ private struct TerminatedTimerView: View {
           .animation(.easeInOut(duration: 0.1).repeatForever(), value: viewModel.isAnimating)
         Spacer()
         Button {
-          timer.state = .stopped
+          timer.stop()
           viewModel.destroyHapticFeedback()
         } label: {
           Image(systemName: "multiply.circle.fill")
@@ -91,6 +88,7 @@ private struct TerminatedTimerView: View {
     }
     .onAppear {
       viewModel.isAnimating.toggle()
+      viewModel.generateHapticFeedback()
     }
   }
 }
