@@ -9,8 +9,6 @@ import Foundation
 import Combine
 
 final class CountdownTimer: ObservableObject {
-  static let shared = CountdownTimer()
-  
   @Published var state: TimerState = .stopped
   @Published var counter = 0
   private var subscription: AnyCancellable?
