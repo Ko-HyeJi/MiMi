@@ -1,3 +1,10 @@
+//
+//  ContentView.swift
+//  MiMi
+//
+//  Created by 고혜지 on 2/28/24.
+//
+
 import SwiftUI
 
 struct ContentView: View {
