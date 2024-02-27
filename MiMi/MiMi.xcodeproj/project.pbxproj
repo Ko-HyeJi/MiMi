@@ -10,7 +10,6 @@
 		8BED9C372B8E4C1C00B26FDF /* MiMiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED9C362B8E4C1C00B26FDF /* MiMiApp.swift */; };
 		8BED9C392B8E4C1C00B26FDF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED9C382B8E4C1C00B26FDF /* ContentView.swift */; };
 		8BED9C3B2B8E4C1D00B26FDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BED9C3A2B8E4C1D00B26FDF /* Assets.xcassets */; };
-		8BED9C3E2B8E4C1D00B26FDF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BED9C3D2B8E4C1D00B26FDF /* Preview Assets.xcassets */; };
 		8BED9C5F2B8E4CE000B26FDF /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED9C562B8E4CE000B26FDF /* RecipeView.swift */; };
 		8BED9C602B8E4CE000B26FDF /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED9C572B8E4CE000B26FDF /* RecipeViewModel.swift */; };
 		8BED9C612B8E4CE000B26FDF /* RiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED9C582B8E4CE000B26FDF /* RiceModel.swift */; };
@@ -27,7 +26,6 @@
 		8BED9C362B8E4C1C00B26FDF /* MiMiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiMiApp.swift; sourceTree = "<group>"; };
 		8BED9C382B8E4C1C00B26FDF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8BED9C3A2B8E4C1D00B26FDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8BED9C3D2B8E4C1D00B26FDF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8BED9C562B8E4CE000B26FDF /* RecipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		8BED9C572B8E4CE000B26FDF /* RecipeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		8BED9C582B8E4CE000B26FDF /* RiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiceModel.swift; sourceTree = "<group>"; };
@@ -37,6 +35,7 @@
 		8BED9C5C2B8E4CE000B26FDF /* CountdownTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		8BED9C5D2B8E4CE000B26FDF /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		8BED9C5E2B8E4CE000B26FDF /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		8BED9C682B8E5C7F00B26FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,29 +68,45 @@
 		8BED9C352B8E4C1C00B26FDF /* MiMi */ = {
 			isa = PBXGroup;
 			children = (
-				8BED9C5C2B8E4CE000B26FDF /* CountdownTimer.swift */,
-				8BED9C5E2B8E4CE000B26FDF /* InfoView.swift */,
-				8BED9C5A2B8E4CE000B26FDF /* MainView.swift */,
-				8BED9C5D2B8E4CE000B26FDF /* MainViewModel.swift */,
-				8BED9C562B8E4CE000B26FDF /* RecipeView.swift */,
-				8BED9C572B8E4CE000B26FDF /* RecipeViewModel.swift */,
-				8BED9C582B8E4CE000B26FDF /* RiceModel.swift */,
-				8BED9C5B2B8E4CE000B26FDF /* TimerView.swift */,
-				8BED9C592B8E4CE000B26FDF /* TimerViewModel.swift */,
+				8BED9C682B8E5C7F00B26FDF /* Info.plist */,
 				8BED9C362B8E4C1C00B26FDF /* MiMiApp.swift */,
 				8BED9C382B8E4C1C00B26FDF /* ContentView.swift */,
+				8BED9C5C2B8E4CE000B26FDF /* CountdownTimer.swift */,
+				8BED9C6B2B8E5F6400B26FDF /* ViewModel */,
+				8BED9C6A2B8E5F5900B26FDF /* View */,
+				8BED9C692B8E5F5100B26FDF /* Model */,
 				8BED9C3A2B8E4C1D00B26FDF /* Assets.xcassets */,
-				8BED9C3C2B8E4C1D00B26FDF /* Preview Content */,
 			);
 			path = MiMi;
 			sourceTree = "<group>";
 		};
-		8BED9C3C2B8E4C1D00B26FDF /* Preview Content */ = {
+		8BED9C692B8E5F5100B26FDF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8BED9C3D2B8E4C1D00B26FDF /* Preview Assets.xcassets */,
+				8BED9C582B8E4CE000B26FDF /* RiceModel.swift */,
 			);
-			path = "Preview Content";
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8BED9C6A2B8E5F5900B26FDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8BED9C5A2B8E4CE000B26FDF /* MainView.swift */,
+				8BED9C562B8E4CE000B26FDF /* RecipeView.swift */,
+				8BED9C5B2B8E4CE000B26FDF /* TimerView.swift */,
+				8BED9C5E2B8E4CE000B26FDF /* InfoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8BED9C6B2B8E5F6400B26FDF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8BED9C5D2B8E4CE000B26FDF /* MainViewModel.swift */,
+				8BED9C572B8E4CE000B26FDF /* RecipeViewModel.swift */,
+				8BED9C592B8E4CE000B26FDF /* TimerViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +167,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BED9C3E2B8E4C1D00B26FDF /* Preview Assets.xcassets in Resources */,
 				8BED9C3B2B8E4C1D00B26FDF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +325,7 @@
 				DEVELOPMENT_TEAM = PS98A42LW7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MiMi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -340,6 +355,7 @@
 				DEVELOPMENT_TEAM = PS98A42LW7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MiMi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
